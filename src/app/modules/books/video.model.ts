@@ -1,10 +1,7 @@
-import mongoose, { Model, model } from "mongoose";
-import { IBookPriceMethods,  IVideo } from "./video.interface";
+import mongoose, { model } from "mongoose";
+import { IVideo } from "./video.interface";
 
-type UserModel = Model<IVideo, {}, IBookPriceMethods>;
-
-
-const videoSchema = new mongoose.Schema<IVideo, UserModel,IBookPriceMethods>({
+const videoSchema = new mongoose.Schema<IVideo>({
   title: {
     type: String,
     required: [true, "Title is required"],
@@ -29,16 +26,13 @@ const videoSchema = new mongoose.Schema<IVideo, UserModel,IBookPriceMethods>({
     type: String,
     required: [true, "Please provide description"],
   },
- 
+
   subscriber: {
     type: String,
     required: [true, "Please provide description"],
   },
- 
-
 });
 
-const VideoModel = model<IVideo, UserModel>("Videos", videoSchema);
-
+const VideoModel = model<IVideo>("Videos", videoSchema);
 
 export default VideoModel;

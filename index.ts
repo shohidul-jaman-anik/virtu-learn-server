@@ -8,12 +8,13 @@ const port = 5000;
 
 // Internal Import
 import videosRoute from "./src/app/modules/books/video.route";
-
+import addNote from "./src/app/modules/note/note.route"
 
 app.use(cors());
 app.use(express.json());
 
-app.use("/getVideo", videosRoute);
+app.use("/", videosRoute);
+app.use("/", addNote);
 
 
 //  Connect  database

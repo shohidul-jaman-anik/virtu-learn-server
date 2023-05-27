@@ -8,9 +8,4 @@ export interface IVideo {
   subscriber: string;
 }
 
-//  For Instance Method
-export interface IBookPriceMethods {
-  price(): number;
-}
 
-// For Static Method

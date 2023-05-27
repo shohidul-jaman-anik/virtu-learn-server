@@ -1,8 +1,9 @@
 import express from "express";
-import {   getVideos } from "./video.controller";
+import { addNotes } from "./note.controller";
 const router = express.Router();
 
-router.get("/getVideo",getVideos);
 
+
+router.post("/addNote",addNotes);
 
 export default router;
