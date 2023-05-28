@@ -9,3 +9,4 @@ export const addNodeService = async (data: INote) => {
   const books = await NoteModel.create(data);
   return books;
 };
+
